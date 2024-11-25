@@ -118,26 +118,92 @@
 // CallBack Functions(basqa funksiyaya argument kimi gonderilen funksiya)
 //  High Order Functions (basqa funksiyani parametr kimi qebul eden funksiya)
 
-let num1=+prompt("num1")
-let num2=+prompt("num2")
+// let num1=+prompt("num1")
+// let num2=+prompt("num2")
 
 
 //  High Order Functions 
-function Calc(num1,num2,callback){
-    let result=callback(num1,num2)
-    return result
-}
+// function Calc(num1,num2,callback){
+//     let result=callback(num1,num2)
+//     return result
+// }
+
+// // CallBack Functions
+// function Sum(x,y){
+//     return x+y
+// }
+
 
 // CallBack Functions
-function Sum(x,y){
-    return x+y
+// function Cixma(a,b){
+//     return a-b
+// }
+
+// console.log(Calc(num1,num2,Sum))
+// console.log(Calc(num1,num2,Cixma))
+
+
+
+const students = [
+        { name: "Ali", scores: [90, 85, 92] },
+        { name: "Mammal", scores: [75, 80, 85] },
+        { name: "Camil", scores: [90, 95, 85] },
+        { name: "Davud", scores: [100, 100, 100] }
+      ];
+
+
+// tələbələr array-ində tələbələrin ortalaması ən yüksək olanı, ortalaması 90-dan yuxarı olanları tapan proqram yazın
+
+
+
+let averages=[]
+for(let i=0;i<students.length;i++){
+        let total=0
+        let ave=0
+     for(let j=0;j<students[i].scores.length;j++)  {
+        total+=students[i].scores[j]
+        ave=total/students[i].scores.length
+     }  
+     averages.push(ave)
 }
 
+// console.log(averages)
 
-// CallBack Functions
-function Cixma(a,b){
-    return a-b
+
+// Task Part 1 
+let max=0
+// 100
+// for(let i=0;i<averages.length;i++){
+//         if(averages[i]>max){
+//         max=averages[i]
+//         }
+
+//         if(averages[i]>90){
+//                 console.log(averages[i])
+//         }
+// }
+
+// console.log(max)
+
+// Task 2
+
+// for(let i=0;i<averages.length;i++){
+      
+// }
+
+
+
+
+let str="enene"
+let reverse=""
+
+
+for(let i=str.length-1;i>=0;i--){
+       reverse+=str[i]
 }
-
-console.log(Calc(num1,num2,Sum))
-console.log(Calc(num1,num2,Cixma))
+if(str==reverse){
+console.log(`${str} palindromdur`)
+}else{
+console.log(`${str} palindrom deyil`)
+}
+console.log(reverse)
